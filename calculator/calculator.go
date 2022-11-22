@@ -5,12 +5,6 @@ import (
 	"math"
 )
 
-type Calc interface {
-	Evaluate(operation string, num float64) error
-	GetResult() float64
-	Restart()
-}
-
 type Calculator struct {
 	operations map[string]func(float64, float64) float64
 	result     float64
