@@ -37,7 +37,6 @@ func main() {
 		case "restart":
 			calculator.Restart()
 		case "exit":
-
 			return
 		default:
 			for i := 0; i < len(parsers); i++ {
