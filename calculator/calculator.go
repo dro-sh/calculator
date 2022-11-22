@@ -5,14 +5,14 @@ import (
 	"math"
 )
 
-type OperationsMap = map[string]func(float64, float64) float64
+type Operations = map[string]func(float64, float64) float64
 
 type Calculator struct {
-	operations OperationsMap
+	operations Operations
 	result     float64
 }
 
-func NewCalculator(operations OperationsMap) *Calculator {
+func NewCalculator(operations Operations) *Calculator {
 	return &Calculator{
 		operations: operations,
 		result:     0.0,
@@ -20,7 +20,7 @@ func NewCalculator(operations OperationsMap) *Calculator {
 }
 
 func NewDefaultCalculator() *Calculator {
-	operations := OperationsMap{
+	operations := Operations{
 		"+": add,
 		"-": sub,
 		"/": div,
